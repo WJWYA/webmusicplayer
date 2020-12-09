@@ -32,6 +32,7 @@ import playlist from './views/06.playlist.vue'
 import mv from './views/07.mv.vue'
 
 const router = new VueRouter({
+  // mode: 'history',
   routes: [
     {
       path: '/',
