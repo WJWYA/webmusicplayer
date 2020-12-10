@@ -234,6 +234,7 @@ export default {
     //去mv页面
     toMV(id){
       this.$router.push(`/mv?q=${id}`)
+      this.$parent.musicUrl = "";
 
     },
     // 去歌单详情页
