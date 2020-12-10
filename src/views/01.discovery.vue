@@ -90,7 +90,7 @@ export default {
     // console.log('created')
     // 轮播图接口
     axios({
-      url: "https://autumnfish.cn/banner",
+      url: "apis/banner", //为解决跨域问题，在vue.config.js添加了proxy，这里的https://autumnfish.cn替换为了apis
       method: "get",
     }).then((res) => {
       // console.log(res)
@@ -99,7 +99,7 @@ export default {
 
     // 推荐歌单
     axios({
-      url: "https://autumnfish.cn/personalized",
+      url: "apis/personalized",
       method: "get",
       params: {
         // 获取的数据量
@@ -112,7 +112,7 @@ export default {
 
     // 最新音乐
     axios({
-      url: "https://autumnfish.cn/personalized/newsong",
+      url: "apis/personalized/newsong",
       method: "get",
     }).then((res) => {
       // console.log(res)
@@ -121,7 +121,7 @@ export default {
 
     // 最新mv
     axios({
-      url: "https://autumnfish.cn/personalized/mv",
+      url: "apis/personalized/mv",
       method: "get",
     }).then((res) => {
       // console.log(res)
@@ -144,7 +144,7 @@ export default {
     playMusic(id) {
       // console.log(id)
       axios({
-        url: "https://autumnfish.cn/song/url",
+        url: "apis/song/url",
         method: "get",
         params: {
           id, // id:id

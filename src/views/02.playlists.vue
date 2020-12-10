@@ -206,7 +206,7 @@ export default {
     // 抽取的方法1 顶部的数据
     topData() {
       axios({
-        url: "https://autumnfish.cn/top/playlist/highquality",
+        url: "apis/top/playlist/highquality",
         method: "get",
         params: {
           limit: 1,
@@ -221,7 +221,7 @@ export default {
     // 抽取的方法2 列表数据
     listData() {
       axios({
-        url: "https://autumnfish.cn/top/playlist/",
+        url: "apis/top/playlist/",
         method: "get",
         params: {
           limit: this.number,

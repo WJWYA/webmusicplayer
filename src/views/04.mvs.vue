@@ -234,7 +234,7 @@ export default {
     getList() {
       // 获取数据
       axios({
-        url: "https://autumnfish.cn/mv/all",
+        url: "apis/mv/all",
         method: "get",
         params: {
           area: this.area,

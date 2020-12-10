@@ -89,7 +89,7 @@ export default {
     getList() {
       // 获取 最新音乐数据
       axios({
-        url: "https://autumnfish.cn/top/song",
+        url: "apis/top/song",
         method: "get",
         params: {
           // 传递 设置的数据
@@ -123,7 +123,7 @@ export default {
     // 播放歌曲
     playMusic(id) {
       axios({
-        url: "https://autumnfish.cn/song/url",
+        url: "apis/song/url",
         method: "get",
         params: {
           id, // id:id
