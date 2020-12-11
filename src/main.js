@@ -11,6 +11,23 @@ Vue.use(ElementUI)
 // 导入全局初始化样式
 import './assets/index.css'
 
+import axios from 'axios'
+// // 创建一个实例
+// const service = axios.create({
+//   // 将我们访问的地址设为baseURL
+//   baseURL: '/api',
+  
+//   // 设置超时时间
+//   timeout: 5000
+// });
+// //设置拦截
+
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = process.env.NODE_ENV === "production" ? "https://autumnfish.cn" :  '/api'
+
+
+
+
 // 路由整合
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
@@ -30,6 +47,8 @@ import mvs from './views/04.mvs.vue'
 import result from './views/05.result.vue'
 import playlist from './views/06.playlist.vue'
 import mv from './views/07.mv.vue'
+
+
 
 const router = new VueRouter({
   // mode: 'history',
@@ -81,5 +100,6 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   // 挂载到Vue示例上
-  router
+  router,
+
 }).$mount('#app')

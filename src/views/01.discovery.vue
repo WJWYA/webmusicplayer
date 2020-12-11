@@ -90,29 +90,33 @@ export default {
     // console.log('created')
     // 轮播图接口
     axios({
-      url: "https://autumnfish.cn/banner",
+      
+      url: "/banner",
       method: "get",
     }).then((res) => {
+      
+      
       // console.log(res)
       this.banners = res.data.banners;
     });
 
     // 推荐歌单
     axios({
-      url: "https://autumnfish.cn/personalized",
+      url: "/personalized",
       method: "get",
       params: {
         // 获取的数据量
         limit: 15,
       },
     }).then((res) => {
+      
       // console.log(res)
       this.list = res.data.result;
     });
 
     // 最新音乐
     axios({
-      url: "https://autumnfish.cn/personalized/newsong",
+      url: "/personalized/newsong",
       method: "get",
     }).then((res) => {
       // console.log(res)
@@ -121,7 +125,7 @@ export default {
 
     // 最新mv
     axios({
-      url: "https://autumnfish.cn/personalized/mv",
+      url: "/personalized/mv",
       method: "get",
     }).then((res) => {
       // console.log(res)
@@ -144,7 +148,7 @@ export default {
     playMusic(id) {
       // console.log(id)
       axios({
-        url: "https://autumnfish.cn/song/url",
+        url: "/song/url",
         method: "get",
         params: {
           id, // id:id

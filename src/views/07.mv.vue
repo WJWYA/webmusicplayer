@@ -177,7 +177,7 @@ export default {
     // 获取mv播放地址
     toMvUrl() {
       axios({
-        url: "https://autumnfish.cn/mv/url",
+        url: "/mv/url",
         method: "get",
         params: {
           id: this.$route.query.q,
@@ -190,7 +190,7 @@ export default {
     //相关mv
     tosimiMvs() {
       axios({
-        url: "https://autumnfish.cn/simi/mv",
+        url: "/simi/mv",
         method: "get",
         params: {
           mvid: this.$route.query.q,
@@ -221,7 +221,7 @@ export default {
     // 获取mv信息
     getMvDetails() {
       axios({
-        url: "https://autumnfish.cn/mv/detail",
+        url: "/mv/detail",
         method: "get",
         params: {
           mvid: this.$route.query.q,
@@ -232,7 +232,7 @@ export default {
         this.mvInfo = res.data.data;
         // 获取歌手信息
         axios({
-          url: "https://autumnfish.cn/artists",
+          url: "/artists",
           method: "get",
           params: {
             id: this.mvInfo.artists[0].id,
@@ -247,7 +247,7 @@ export default {
     // 获取评论数据
     getComments() {
       axios({
-        url: "https://autumnfish.cn/comment/mv",
+        url: "/comment/mv",
         method: "get",
         params: {
           id: this.$route.query.q,
@@ -316,7 +316,7 @@ export default {
     // 获取评论数据
     getCommentsAgin() {
       axios({
-        url: "https://autumnfish.cn/comment/mv",
+        url: "/comment/mv",
         method: "get",
         params: {
           id: this.$route.query.q,

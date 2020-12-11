@@ -10,9 +10,9 @@
         <p class="title">{{ playlist.name }}</p>
         <!-- 头像 -->
         <div class="author-wrap">
-          <img class="avatar" :src="playlist.creator.avatarUrl" alt="" />
-          <span class="name">{{ playlist.creator.nickname }}</span>
-          <span class="time">{{ playlist.createTime }} 创建</span>
+          <img class="avatar" :src="avatarUrl" alt="" />
+          <span class="name">{{ nickname }}</span>
+          <span class="time">{{ createTime }} 创建</span>
         </div>
         <div class="play-wrap">
           <span class="iconfont icon-circle-play"></span>
@@ -146,6 +146,12 @@ export default {
   name: "playlist",
   data() {
     return {
+      // 封面图片
+      avatarUrl:"",
+      // 封面昵称
+      nickname:"",
+      // 封面创建时间
+      createTime:"",
       activeIndex: "1",
       // 总条数
       total: 0,
@@ -165,7 +171,7 @@ export default {
   created() {
     // 获取歌单详情
     axios({
-      url: "https://autumnfish.cn/playlist/detail",
+      url: "/playlist/detail",
       method: "get",
       params: {
         id: this.$route.query.q,
@@ -173,6 +179,9 @@ export default {
     }).then((res) => {
       // console.log(res)
       this.playlist = res.data.playlist;
+      this.avatarUrl = res.data.playlist.creator.avatarUrl
+      this.nickname = res.data.playlist.creator.nickname
+      this.createTime = res.data.playlist.createTime
       // console.log(this.playlist);
       for (let i = 0; i < this.playlist.tracks.length; i++) {
         let min = parseInt(this.playlist.tracks[i].dt / 1000 / 60);
@@ -186,10 +195,29 @@ export default {
         // console.log(min + ":" + sec);
         this.playlist.tracks[i].dt = min + ":" + sec;
       }
+      let time = new Date(this.createTime);
+          let y = time.getFullYear();
+          let m = time.getMonth() + 1;
+          let d = time.getDate();
+          let h = time.getHours();
+          let mm = time.getMinutes();
+          let s = time.getSeconds();
+          this.createTime =
+            y +
+            "-" +
+            this.add0(m) +
+            "-" +
+            this.add0(d) +
+            " " +
+            this.add0(h) +
+            ":" +
+            this.add0(mm) +
+            ":" +
+            this.add0(s);
     });
     // 获取评论
     axios({
-      url:"https://autumnfish.cn/comment/hot",
+      url:"/comment/hot",
       method:"get",
       params:{
         id:this.$route.query.q,
@@ -208,7 +236,7 @@ export default {
     })
     // 获取最新评论
     axios({
-      url:"https://autumnfish.cn/comment/playlist",
+      url:"/comment/playlist",
       method:"get",
       params:{
         id:this.$route.query.q,
@@ -231,6 +259,9 @@ export default {
 
   },
   methods: {
+     add0(m) {
+      return m < 10 ? "0" + m : m;
+    },
 
      //去mv页面
     toMV(id){
@@ -241,7 +272,7 @@ export default {
     playMusic(id) {
       // console.log(id)
       axios({
-        url: "https://autumnfish.cn/song/url",
+        url: "/song/url",
         method: "get",
         params: {
           id, // id:id
@@ -261,7 +292,7 @@ export default {
       this.page = val
       //重新获取数据
       axios({
-      url:"https://autumnfish.cn/comment/playlist",
+      url:"/comment/playlist",
       method:"get",
       params:{
         id:this.$route.query.q,
