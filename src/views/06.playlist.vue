@@ -171,7 +171,7 @@ export default {
   created() {
     // 获取歌单详情
     axios({
-      url: "apis/playlist/detail",
+      url: "/playlist/detail",
       method: "get",
       params: {
         id: this.$route.query.q,
@@ -218,7 +218,7 @@ export default {
     });
     // 获取评论
     axios({
-      url:"apis/comment/hot",
+      url:"/comment/hot",
       method:"get",
       params:{
         id:this.$route.query.q,
@@ -237,7 +237,7 @@ export default {
     })
     // 获取最新评论
     axios({
-      url:"apis/comment/playlist",
+      url:"/comment/playlist",
       method:"get",
       params:{
         id:this.$route.query.q,
@@ -273,7 +273,7 @@ export default {
     playMusic(id) {
       // console.log(id)
       axios({
-        url: "apis/song/url",
+        url: "/song/url",
         method: "get",
         params: {
           id, // id:id
@@ -293,7 +293,7 @@ export default {
       this.page = val
       //重新获取数据
       axios({
-      url:"apis/comment/playlist",
+      url:"/comment/playlist",
       method:"get",
       params:{
         id:this.$route.query.q,

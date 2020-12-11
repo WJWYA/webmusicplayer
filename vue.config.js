@@ -3,7 +3,7 @@ module.exports = {
   // 解决跨域
   devServer:{
     proxy: {
-      '/apis': {
+      '/api': {
   
         // 测试环境
   
@@ -13,7 +13,7 @@ module.exports = {
   
         pathRewrite: {
   
-          '^/apis': '' //需要rewrite重写的,
+          '^/api': '' //需要rewrite重写的,
         }
       }
     }

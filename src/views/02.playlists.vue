@@ -206,7 +206,7 @@ export default {
     // 抽取的方法1 顶部的数据
     topData() {
       axios({
-        url: "apis/top/playlist/highquality",
+        url: "/top/playlist/highquality",
         method: "get",
         params: {
           limit: 1,
@@ -221,7 +221,7 @@ export default {
     // 抽取的方法2 列表数据
     listData() {
       axios({
-        url: "apis/top/playlist/",
+        url: "/top/playlist/",
         method: "get",
         params: {
           limit: this.number,

@@ -150,7 +150,7 @@ export default {
           break;
       }
       axios({
-        url: "apis/search",
+        url: "/search",
         method: "get",
         params: {
           keywords: this.$route.query.q,
@@ -247,7 +247,7 @@ export default {
     playMusic(id) {
       // console.log(id)
       axios({
-        url: "apis/song/url",
+        url: "/song/url",
         method: "get",
         params: {
           id, // id:id
@@ -262,7 +262,7 @@ export default {
     },
     search() {
       axios({
-        url: "apis/search",
+        url: "/search",
         method: "get",
         params: {
           keywords: this.$route.query.q,

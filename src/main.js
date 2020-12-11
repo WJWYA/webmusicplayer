@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import axios from 'axios'
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = process.env.NODE_ENV === "production" ? "https://autumnfish.cn" : "/api"
+
+
 // 导入 Element_ui
 import ElementUI from 'element-ui'
 // 导入 Element-ui 样式
