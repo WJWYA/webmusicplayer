@@ -2,11 +2,13 @@
   <div class="top-container">
     <div class="left-box">
       <div class="icon-wrapper">
+        
         <!-- <span class="iconfont icon-home"></span>
         <span class="iconfont icon-sami-select"></span>
         <span class="iconfont icon-full-screen"></span> -->
       </div>
       <div class="history-wrapper">
+        <p class="top_title">WYA在线音乐播放器</p>
         <!-- <span class="iconfont icon-arrow-lift"></span>
         <span class="iconfont icon-arrow-right"></span> -->
       </div>
@@ -55,4 +57,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.el-input:focus{
+  outline: none;
+}
+.el-input__inner{
+  border: 3px;
+  outline-width:2px;
+}
+</style>

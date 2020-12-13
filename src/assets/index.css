@@ -1,6 +1,7 @@
 body,
 html {
   height: 100%;
+  color: #efca35;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -29,12 +30,12 @@ ol {
 }
 
 .el-tabs__active-bar {
-  background-color: #c3473a;
+  background-color: #efca35;
 }
 
 .el-tabs__item:hover,
 .el-tabs__item.is-active {
-  color: #c3473a;
+  color: #efca35;
 }
 
 .el-table th > .cell {
@@ -45,10 +46,15 @@ ol {
 .el-pagination {
   margin-top: 50px;
   text-align: center;
+  
+  
 }
-
+.el-pagination.is-background .el-pager li:hover{
+  color: #efca35!important
+}
 .el-pagination.is-background .el-pager li:not(.disabled).active {
-  background-color: #3d82ac;
+  background-color: #efca35;
+  
 }
 
 .el-table {
@@ -104,7 +110,7 @@ ol {
 
 .el-table .song-wrap .icon-mv {
   padding-left: 5px;
-  color: #3d82ac;
+  color: #efca35;
 }
 
 .el-table .img-wrap {
@@ -126,7 +132,7 @@ ol {
   transform: translate(-50%, -50%);
   width: 25px;
   height: 25px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 12px;
   border-radius: 50%;
   display: flex;
@@ -156,6 +162,8 @@ ol {
   height: 100%;
   border-radius: 10px;
 }
+
+
 
 .discovery-container .title {
   font-weight: normal;
@@ -221,7 +229,7 @@ ol {
   bottom: 13px;
   width: 40px;
   height: 40px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 20px;
   border-radius: 50%;
   display: flex;
@@ -296,7 +304,7 @@ ol {
   transform: translate(-50%, -50%);
   width: 30px;
   height: 30px;
-  color: #3d82ac;
+  color: #efca35;
   text-align: center;
   line-height: 30px;
   border-radius: 50%;
@@ -349,7 +357,7 @@ ol {
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 20px;
   border-radius: 50%;
   display: flex;
@@ -506,7 +514,7 @@ ol {
 }
 
 .mv-container .mv-wrap .comment-wrap .item .content-wrap .name {
-  color: #517eaf;
+  color: #efca35;
   font-size: 14px;
 }
 
@@ -560,7 +568,7 @@ ol {
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 20px;
   border-radius: 50%;
   display: flex;
@@ -647,8 +655,8 @@ ol {
 }
 
 .mvs-container .filter-wrap > div span.title.active {
-  color: #3d82ac;
-  background-color: #76b3d6;
+  color: #efca35;
+  background-color: #eeeff0;
   border-radius: 20px;
 }
 
@@ -766,7 +774,7 @@ ol {
   width: 120px;
   height: 35px;
   border-radius: 4px;
-  background: linear-gradient(to right, #e85e4d, #c6483c);
+  background: linear-gradient(to right, #efca35, #ebc52c);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -859,7 +867,7 @@ ol {
 }
 
 .playlist-container .comment-wrap .item .content-wrap .name {
-  color: #517eaf;
+  color: #efca35;
   font-size: 14px;
 }
 
@@ -967,7 +975,7 @@ ol {
 }
 
 .playlists-container .tab-container .tab-bar .item.active {
-  color: #3d82ac;
+  color: #efca35;
 }
 
 .playlists-container .tab-container .tab-content {
@@ -1022,7 +1030,7 @@ ol {
   bottom: 13px;
   width: 40px;
   height: 40px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 20px;
   border-radius: 50%;
   display: flex;
@@ -1098,7 +1106,7 @@ ol {
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 20px;
   border-radius: 50%;
   display: flex;
@@ -1179,7 +1187,7 @@ ol {
 }
 
 .songs-container .tab-bar .item.active {
-  color: #3d82ac;
+  color: #efca35;
 }
 
 .songs-container .song-table .song-wrap > span {
@@ -1190,7 +1198,7 @@ ol {
 
 .songs-container .song-table .song-wrap .icon-mv {
   padding-left: 5px;
-  color: #3d82ac;
+  color: #efca35;
 }
 
 .songs-container .song-table .img-wrap {
@@ -1212,7 +1220,7 @@ ol {
   transform: translate(-50%, -50%);
   width: 25px;
   height: 25px;
-  color: #3d82ac;
+  color: #efca35;
   font-size: 12px;
   border-radius: 50%;
   display: flex;
@@ -1230,7 +1238,7 @@ ol {
 }
 
 .index-container .nav {
-  background-color: #ededed;
+  background-color: #868a8a;
   width: 200px;
   height: 100%;
 }
@@ -1243,7 +1251,7 @@ ol {
 }
 
 .index-container .nav li:hover {
-  background-color: #e7e7e7;
+  background-color: #eeeff0;
 }
 
 .index-container .nav li .iconfont {
@@ -1252,7 +1260,7 @@ ol {
 }
 
 .index-container .nav li a {
-  color: #033345;
+  color: #262b32;
   padding-left: 30px;
   font-size: 18px;
   line-height: 60px;
@@ -1261,11 +1269,11 @@ ol {
 }
 
 .index-container .nav li a.router-link-active {
-  color: #3d82ac;
+  color: #efca35;
 }
 
 .index-container .nav li a.router-link-active .iconfont {
-  color: #3d82ac;
+  color: #efca35;
 }
 
 .index-container .main {
@@ -1298,7 +1306,7 @@ ol {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  background-color: #f9f9f9;
+  background-color: #efca35;
   width: 100%;
 }
 
@@ -1330,7 +1338,7 @@ ol {
 }
 
 .top-container .left-box .icon-wrapper .iconfont.icon-home {
-  background-color: #3d82ac;
+  background-color: #efca35;
   border-radius: 50%;
 }
 
@@ -1390,4 +1398,10 @@ ol {
   height: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.comment{
+  color: #262b32;
+}
+.top_title{
+  color: #eeeff0;
 }
