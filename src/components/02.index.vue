@@ -46,7 +46,7 @@ export default {
   name: 'index',
   data() {
     return {
-      musicUrl:"https://node.kg.qq.com/cgi/fcgi-bin/fcg_get_play_url?shareid=KHzNQzK_tG_nIKe0"
+      musicUrl:"https://node.kg.qq.com/cgi/fcgi-bin/fcg_get_play_url?shareid=Z-FyqFZ72XM4FZsz"
     };
   }
 };
